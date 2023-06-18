@@ -1,0 +1,11 @@
+C:\MaXiMAA\Projects\C#\OpelFirmwareCodeFinder\OpelFirmwareCodeFinder\obj\Debug\OpelFirmwareCodeFinder.csproj.AssemblyReference.cache
+C:\MaXiMAA\Projects\C#\OpelFirmwareCodeFinder\OpelFirmwareCodeFinder\obj\Debug\OpelFirmwareCodeFinder.csproj.SuggestedBindingRedirects.cache
+C:\MaXiMAA\Projects\C#\OpelFirmwareCodeFinder\OpelFirmwareCodeFinder\obj\Debug\OpelFirmwareCodeFinder.csproj.GenerateResource.cache
+C:\MaXiMAA\Projects\C#\OpelFirmwareCodeFinder\OpelFirmwareCodeFinder\obj\Debug\OpelFirmwareCodeFinder.csproj.CoreCompileInputs.cache
+C:\MaXiMAA\Projects\C#\OpelFirmwareCodeFinder\OpelFirmwareCodeFinder\bin\Debug\OpelDensoCodeFinder.exe.config
+C:\MaXiMAA\Projects\C#\OpelFirmwareCodeFinder\OpelFirmwareCodeFinder\bin\Debug\OpelDensoCodeFinder.exe
+C:\MaXiMAA\Projects\C#\OpelFirmwareCodeFinder\OpelFirmwareCodeFinder\bin\Debug\OpelDensoCodeFinder.pdb
+C:\MaXiMAA\Projects\C#\OpelFirmwareCodeFinder\OpelFirmwareCodeFinder\obj\Debug\OpelDensoCodeFinder.MainForm.resources
+C:\MaXiMAA\Projects\C#\OpelFirmwareCodeFinder\OpelFirmwareCodeFinder\obj\Debug\OpelDensoCodeFinder.Properties.Resources.resources
+C:\MaXiMAA\Projects\C#\OpelFirmwareCodeFinder\OpelFirmwareCodeFinder\obj\Debug\OpelDensoCodeFinder.exe
+C:\MaXiMAA\Projects\C#\OpelFirmwareCodeFinder\OpelFirmwareCodeFinder\obj\Debug\OpelDensoCodeFinder.pdb
