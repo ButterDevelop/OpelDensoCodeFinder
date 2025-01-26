@@ -11,7 +11,7 @@
 - **User-Friendly GUI**: Simplified interface for easy navigation and code searching.
 - **Efficient Code Extraction**: Quickly processes firmware files to find relevant codes.
 - **Support for Opel Vehicles**: Tailored to work with Denso modules in Opel car firmware.
-- **Release Versions Available**: Access stable releases directly from the [GitHub Releases](https://github.com/ButterDevelop/OpenDensoCodeFinder/releases).
+- **Release Versions Available**: Access stable releases directly from the [GitHub Releases](https://github.com/ButterDevelop/OpelDensoCodeFinder/releases).
 
 ## How It Works
 
@@ -27,7 +27,7 @@
 
 ## Releases
 
-Stable and pre-release versions are available on the [GitHub Releases Page](https://github.com/ButterDevelop/OpenDensoCodeFinder/releases). Download the latest version to get started quickly.
+Stable and pre-release versions are available on the [GitHub Releases Page](https://github.com/ButterDevelop/OpelDensoCodeFinder/releases). Download the latest version to get started quickly.
 
 ## Contributing
 
