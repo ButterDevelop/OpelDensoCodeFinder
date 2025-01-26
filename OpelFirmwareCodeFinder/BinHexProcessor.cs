@@ -1,29 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace OpelDensoCodeFinder
 {
     public class BinHexProcessor
     {
-        public string FilePath { get; private set; }
+        public string FilePath  { get; private set; }
         public string UserInput { get; private set; }
 
         public BinHexProcessor(string filePath, string userInput)
         {
-            FilePath = filePath;
+            FilePath  = filePath;
             UserInput = userInput;
         }
 
         public string Process()
         {
             string hex = ReadAndReverseBinFile(FilePath);
-            bool isCodeNeededToBeReversed = NeedReverse(hex, UserInput);
-            if (isCodeNeededToBeReversed) hex = ReversePairsInHex(hex);
+            if (NeedReverse(hex, UserInput))
+            {
+                hex = ReversePairsInHex(hex);
+            }
             string result = SearchInHex(hex);
             return result;
         }
@@ -38,12 +38,14 @@ namespace OpelDensoCodeFinder
 
         private bool NeedReverse(string hex, string userInput)
         {
-            string userInputHex = String.Join("", Encoding.ASCII.GetBytes(userInput).Select(b => b.ToString("X2")));
+            string userInputHex = string.Join("", Encoding.ASCII.GetBytes(userInput).Select(b => b.ToString("X2")));
 
             // Создаем шаблон поиска, где между каждой парой символов может быть любая пара символов
-            string pattern = String.Join("..", userInputHex.Select((x, i) => i % 2 == 0 ? userInputHex.Substring(i, 2) : "").Where(x => !string.IsNullOrEmpty(x)));
+            string pattern = string.Join("..", userInputHex.Select((x, i) => i % 2 == 0 ? userInputHex.Substring(i, 2) : "")
+                                                           .Where(x => !string.IsNullOrEmpty(x))
+                                        );
 
-            if (System.Text.RegularExpressions.Regex.IsMatch(hex, pattern))
+            if (Regex.IsMatch(hex, pattern))
             {
                 return false;
             }
@@ -53,8 +55,8 @@ namespace OpelDensoCodeFinder
 
         private string SearchInHex(string hex)
         {
-            string sequence = "00FF5AA500FF";
-            string reverseSequence = "FF00A55AFF00";
+            string sequence        = "00FF5AA500FF";
+            string reverseSequence = string.Concat(sequence.Reverse());
 
             string code = null;
             if (hex.Contains(sequence))
@@ -68,7 +70,7 @@ namespace OpelDensoCodeFinder
 
             if (code != null)
             {
-                string asciiString = String.Join("", Enumerable.Range(0, code.Length / 2)
+                string asciiString = string.Join("", Enumerable.Range(0, code.Length / 2)
                                                                .Select(x => Convert.ToChar(Convert.ToUInt32(code.Substring(x * 2, 2), 16))));
                 string digitPattern1 = new string(asciiString.Where((c, i) => i % 2 == 0 && char.IsDigit(c)).ToArray());
                 string digitPattern2 = new string(asciiString.Where((c, i) => i % 2 != 0 && char.IsDigit(c)).ToArray());
